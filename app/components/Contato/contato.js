@@ -9,6 +9,8 @@ export default function Contato() {
     const [messages, setMessages] = useState([])
     const [status, setStatus] = useState(false)
     const [lastMessage, setLastMessage] = useState({ nome: "", protocolo: 0 })
+    const [sending, setSending] = useState(false)
+    const [error, setError] = useState(false)
 
     useEffect(() => {
         const messages = JSON.parse(localStorage.getItem('mensagens')) || []
@@ -34,16 +36,42 @@ export default function Contato() {
     }, [messages])
 
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
 
         const protocol = generateProtocol()
 
-        setLastMessage({ ...lastMessage, nome: form.nome, protocolo: protocol })
-        setMessages([...messages, { nome: form.nome, email: form.email, mensagem: form.mensagem, protocolo: protocol }])
+        setSending(true)
+        setStatus(false)
+        setError(false)
 
-        setStatus(true)
-        setForm({ nome: "", email: "", mensagem: "" })
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                headers: { "Content-Type": "application/json", Accept: "application/json" },
+                body: JSON.stringify({
+                    access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY,
+                    subject: `Novo contato pelo site SnapNote #${protocol}`,
+                    nome: form.nome,
+                    email: form.email,
+                    mensagem: form.mensagem,
+                    protocolo: protocol
+                })
+            })
+            const result = await response.json()
+
+            if (!result.success) throw new Error(result.message)
+
+            setLastMessage({ ...lastMessage, nome: form.nome, protocolo: protocol })
+            setMessages([...messages, { nome: form.nome, email: form.email, mensagem: form.mensagem, protocolo: protocol }])
+
+            setStatus(true)
+            setForm({ nome: "", email: "", mensagem: "" })
+        } catch {
+            setError(true)
+        } finally {
+            setSending(false)
+        }
 
     }
 
@@ -57,7 +85,7 @@ export default function Contato() {
                 <a className="text-brand-lime border-b border-brand-lime" href="mailto:equipe@snapnote.com">equipe@snapnote.com ↗</a>
             </div>
 
-            <ContactUs handleChange={handleChange} handleSubmit={handleSubmit} lastMessage={lastMessage} status={status} form={form}/>
+            <ContactUs handleChange={handleChange} handleSubmit={handleSubmit} lastMessage={lastMessage} status={status} form={form} sending={sending} error={error}/>
         </section>
     );
 }

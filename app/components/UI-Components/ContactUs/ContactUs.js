@@ -1,6 +1,6 @@
 import Mensagem from "../../Mensagem/mensagem"
 
-export default function ContactUs({ handleChange, handleSubmit, lastMessage, status, form}) {
+export default function ContactUs({ handleChange, handleSubmit, lastMessage, status, form, sending, error}) {
     return (
         <form className="flex w-full flex-col gap-6.25 rounded-[15px] border border-[#444] bg-[#171b21] p-7.5" id="formContact" onSubmit={handleSubmit}>
             <div className="grid grid-cols-2 gap-6.25 max-[650px]:grid-cols-1">
@@ -17,9 +17,12 @@ export default function ContactUs({ handleChange, handleSubmit, lastMessage, sta
                     <textarea className="font-mansrope w-full min-h-25 resize-y border-b border-[#555] bg-transparent py-3 text-brand-snow outline-none focus:border-brand-lime" onChange={handleChange} value={form.mensagem} required id="mensagem" name="mensagem" placeholder="Conte para a gente..."></textarea>
                 </div>
             </div>
-            <button className="self-start cursor-pointer rounded-[30px] bg-brand-lime px-5.5 py-3.5 transition-[transform,background] duration-300 hover:translate-x-1.5 hover:bg-brand-snow" type="submit">Enviar mensagem <span>→</span></button>
+            <button className="self-start cursor-pointer rounded-[30px] bg-brand-lime px-5.5 py-3.5 transition-[transform,background] duration-300 hover:translate-x-1.5 hover:bg-brand-snow disabled:cursor-wait disabled:opacity-60 disabled:hover:translate-x-0" type="submit" disabled={sending}>{sending ? "Enviando..." : <>Enviar mensagem <span>→</span></>}</button>
             {status ?
                 <Mensagem nome={lastMessage.nome} protocolo={lastMessage.protocolo} />
+                : null}
+            {error ?
+                <p className="text-sm text-brand-orange" role="alert">Não foi possível enviar a mensagem. Tente novamente ou escreva para equipe@snapnote.com.</p>
                 : null}
         </form>
     )
