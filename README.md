@@ -99,7 +99,10 @@ app/
 │   ├── Contato/           # Formulário de contato (localStorage + Math)
 │   ├── Mensagem/          # Confirmação exibida após o envio do formulário
 │   ├── SectionTag/        # Label reutilizável de cada seção
+│   ├── Experimente/       # Links do protótipo (APK) e do código-fonte
 │   └── Footer/            # Rodapé
+├── experimente/
+│   └── page.js            # Página "Experimente" (/experimente)
 ├── globals.css
 └── page.js                # Monta as seções e passa os dados da equipe via props
 ```
