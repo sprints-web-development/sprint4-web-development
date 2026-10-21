@@ -1,12 +1,20 @@
 'use client'
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import MobileMenu from "../UI-Components/MobileMenu/MobileMenu";
 import MobileButton from "../UI-Components/MobileMenu/MobileButton";
 
 export default function Header() {
 
   const[menuOpen, setMenuOpen] = useState(false)
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 991) setMenuOpen(false)
+    }
+    window.addEventListener("resize", handleResize)
+    return () => window.removeEventListener("resize", handleResize)
+  }, [])
 
   return (
     <header className="fixed inset-x-0 top-0 z-10 flex items-center justify-around border-b border-brand-grey bg-brand-cream px-5 py-3.75">
@@ -26,7 +34,7 @@ export default function Header() {
         </ul>
       </nav>
       <MobileButton menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
-      <MobileMenu menuOpen={menuOpen}/>
+      <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
     </header>
 
   );

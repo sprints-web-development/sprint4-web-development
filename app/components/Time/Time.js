@@ -14,7 +14,7 @@ export default function Time({ time }) {
                 </div>
             </div>
 
-            <div className="grid grid-cols-6 gap-5 max-[991px]:grid-cols-2">
+            <div className="grid grid-cols-6 gap-5 max-[991px]:grid-cols-2 max-[650px]:grid-cols-1">
 
                 {time && time.length > 0 ?
                     time.map((partner, index) => (

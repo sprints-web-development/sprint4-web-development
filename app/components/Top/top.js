@@ -7,18 +7,18 @@ export default function Top() {
             <div className="flex h-full w-full max-[1199px]:flex-col max-[1199px]:gap-7.5 max-[991px]:items-center max-[991px]:justify-center">
                 <div className="flex h-full max-w-1/2 flex-col justify-center px-7.5 max-[1199px]:w-full max-[1199px]:max-w-full max-[1199px]:px-0 max-[991px]:w-full max-[991px]:max-w-full max-[991px]:px-0">
                     <SectionTag name="Da Foto à Memória, sem perder o contexto"/>
-                    <h1 className="text-start text-[80px] font-medium leading-[1.2] max-[650px]:text-[42px] max-[650px]:leading-[1.1] max-[500px]:text-[50px]">Suas anotações merecem ser</h1>
-                    <h1 className="font-playfair text-brand-blue text-start text-[80px] font-medium leading-[1.2] max-[650px]:text-[42px] max-[650px]:leading-[1.1] max-[500px]:text-[50px]">reencontradas</h1>
+                    <h1 className="text-start text-[clamp(42px,4vw+20px,80px)] font-medium leading-[1.2] max-[650px]:leading-[1.1]">Suas anotações merecem ser</h1>
+                    <h1 className="font-playfair text-brand-blue text-start text-[clamp(42px,4vw+20px,80px)] font-medium leading-[1.2] max-[650px]:leading-[1.1]">reencontradas</h1>
                     <p className="text-brand-grey max-[650px]:text-[15px]">O SnapNote transforma fotos de lousas, cadernos e slides em registros organizados,
                         pesquisáveis e
                         prontos para a sua próxima revisão.
                     </p>
-                    <div className="my-5 flex gap-3.75 max-[370px]:flex-col">
-                        <a href="#galeria"><button className="cursor-pointer rounded-[50px] bg-brand-primary px-7.5 py-5 text-[15px] font-light text-brand-cream transition-[.3s] ease-in hover:border hover:border-brand-primary hover:bg-brand-cream hover:text-brand-primary">Conheça a solução</button></a>
-                        <a href="#galeria2"><button className="cursor-pointer rounded-[15px] border border-brand-primary bg-brand-cream px-7.5 py-5 text-[15px] font-bold text-brand-primary transition-[.3s] ease-in hover:border-brand-cream hover:bg-brand-primary hover:text-brand-cream">Ver protótipo</button></a>
+                    <div className="my-5 flex gap-3.75 max-[650px]:flex-wrap max-[370px]:flex-col">
+                        <a href="#galeria" className="max-[370px]:w-full"><button className="max-[370px]:w-full cursor-pointer rounded-[50px] bg-brand-primary px-7.5 py-5 text-[15px] font-light text-brand-cream transition-[.3s] ease-in hover:border hover:border-brand-primary hover:bg-brand-cream hover:text-brand-primary">Conheça a solução</button></a>
+                        <a href="#galeria2" className="max-[370px]:w-full"><button className="max-[370px]:w-full cursor-pointer rounded-[15px] border border-brand-primary bg-brand-cream px-7.5 py-5 text-[15px] font-bold text-brand-primary transition-[.3s] ease-in hover:border-brand-cream hover:bg-brand-primary hover:text-brand-cream">Ver protótipo</button></a>
                     </div>
                     <div className="my-2.5 h-px w-[90%] rounded-[5px] bg-brand-light-grey"></div>
-                    <div className="flex items-center justify-around p-2.5">
+                    <div className="flex items-center justify-around p-2.5 max-[650px]:flex-wrap max-[650px]:justify-between max-[650px]:gap-3.75 max-[650px]:px-0">
                         <div className="flex flex-col items-start justify-center">
                             <p className="text-xl font-bold text-brand-blue">Menos</p>
                             <p className="text-sm text-brand-grey">tempo buscando</p>
@@ -43,7 +43,7 @@ export default function Top() {
                     />
                     <div className="absolute z-1 h-[500px] w-[500px] rounded-full bg-brand-blue max-[1199px]:h-[400px] max-[1199px]:w-[400px] max-[991px]:h-[350px] max-[991px]:w-[350px] max-[650px]:h-[300px] max-[650px]:w-[300px] max-[500px]:h-[270px] max-[500px]:w-[270px]"></div>
                     <span className="font-playfair text-brand-primary absolute top-[10%] left-[20%] z-9 rotate-[-20deg] text-xl max-[991px]:left-[10%] max-[650px]:left-[5%] max-[650px]:top-[5%] max-[650px]:text-[16px]">ideias</span>
-                    <div className="absolute right-20 z-9 flex items-center justify-around gap-2.5 rounded-[15px] bg-[rgba(255,255,255,0.918)] p-3.75 shadow-[2px_2px_2px_rgba(0,0,0,.35)] max-[991px]:right-[5%] max-[650px]:right-0 max-[650px]:origin-right max-[650px]:scale-[.85] max-[650px]:p-2.5 max-[500px]:right-[-5%] max-[500px]:scale-[.7]">
+                    <div className="absolute right-20 z-9 flex items-center justify-around gap-2.5 rounded-[15px] bg-[rgba(255,255,255,0.918)] p-3.75 shadow-[2px_2px_2px_rgba(0,0,0,.35)] max-[991px]:right-[5%] max-[650px]:right-0 max-[650px]:origin-right max-[650px]:scale-[.85] max-[650px]:p-2.5 max-[500px]:right-0 max-[500px]:scale-[.7]">
                         <div className="flex h-7.5 w-7.5 items-center justify-center rounded-full bg-brand-lime">
                             <svg xmlns="http://w3.org" viewBox="0 0 24 24" width="24" height="24" fill="none"
                                 stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-brand-blue">
@@ -55,7 +55,7 @@ export default function Top() {
                             <p className="text-[10px]">Física - Cinemática</p>
                         </div>
                     </div>
-                    <div className="absolute bottom-12.5 left-20 z-9 flex items-center justify-around gap-2.5 rounded-[15px] bg-[rgba(255,255,255,0.918)] p-3.75 shadow-[2px_2px_2px_rgba(0,0,0,.35)] max-[991px]:bottom-[5%] max-[991px]:left-[5%] max-[650px]:left-0 max-[650px]:origin-left max-[650px]:scale-[.85] max-[650px]:p-2.5 max-[500px]:left-[-5%] max-[500px]:scale-[.7]">
+                    <div className="absolute bottom-12.5 left-20 z-9 flex items-center justify-around gap-2.5 rounded-[15px] bg-[rgba(255,255,255,0.918)] p-3.75 shadow-[2px_2px_2px_rgba(0,0,0,.35)] max-[991px]:bottom-[5%] max-[991px]:left-[5%] max-[650px]:left-0 max-[650px]:origin-left max-[650px]:scale-[.85] max-[650px]:p-2.5 max-[500px]:left-0 max-[500px]:scale-[.7]">
                         <div className="flex items-center justify-center">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path

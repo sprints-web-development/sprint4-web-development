@@ -3,7 +3,7 @@ export default function Person({ user }) {
     const isProfessional = user.style !== 1
 
     return (
-        <div className={`mx-auto flex h-full w-[90%] flex-col justify-between rounded-[15px] p-7.5 ${isProfessional ? 'bg-brand-pure' : 'bg-brand-blue'}`}>
+        <div className={`mx-auto flex h-full w-[90%] max-[850px]:w-full flex-col justify-between rounded-[15px] p-7.5 ${isProfessional ? 'bg-brand-pure' : 'bg-brand-blue'}`}>
             <div className="flex items-center justify-between">
                 <div className={`flex h-12.5 w-12.5 items-center justify-center rounded-full ${isProfessional ? 'bg-brand-orange' : 'bg-brand-lime'}`}>
                     <p className={isProfessional ? 'text-brand-pure' : 'text-brand-blue'}>{user.abbreviation}</p>

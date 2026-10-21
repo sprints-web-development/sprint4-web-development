@@ -2,7 +2,7 @@ export default function Problem() {
     return (
         <section className="flex w-full items-center bg-brand-primary px-20 py-25 text-brand-cream max-[1250px]:px-7.5 max-[850px]:px-7.5 max-[500px]:px-5">
             <div className="grid w-full grid-cols-2 gap-20 max-[1199px]:grid-cols-1">
-                <div className="text-[50px]">
+                <div className="text-[clamp(34px,3vw+20px,50px)]">
                     <h2 className="text-brand-cream">
                         A galeria registra.
                         <br />
@@ -13,7 +13,7 @@ export default function Problem() {
                     <p className="text-brand-cream">Fotografamos conteúdos importantes todos os dias. Depois, eles desaparecem entre prints, memes e
                         milhares de imagens sem nome.
                     </p>
-                    <div className="grid grid-cols-3">
+                    <div className="grid grid-cols-3 max-[650px]:grid-cols-1 max-[650px]:gap-5">
                         <div className="flex flex-col items-start justify-start">
                             <div className="my-2.5 h-px w-[90%] rounded-[5px] bg-brand-light-grey"></div>
                             <strong className="mb-5 text-brand-lime">01</strong>

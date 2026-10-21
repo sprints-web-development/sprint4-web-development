@@ -6,15 +6,15 @@ export default function Caracteristicas() {
                 <h2 className="text-start text-[clamp(50px,5vw+15px,70px)] text-brand-cream">Menos tempo procurando.<br /><span className="font-playfair text-brand-lime">Mais tempo aprendendo.</span></h2>
             </div>
             <div className="flex flex-col gap-3.75">
-                <div className="flex items-center justify-between py-3.75 max-[850px]:flex-col">
+                <div className="flex items-center justify-between py-3.75 max-[850px]:flex-col max-[850px]:items-start">
                     <p className="text-brand-lime">Organização</p>
                     <p className="text-brand-cream">Registros agrupados e renomeados com certeza.</p>
                 </div>
-                <div className="flex items-center justify-between border-t border-b border-brand-cream py-3.75 max-[850px]:flex-col">
+                <div className="flex items-center justify-between border-t border-b border-brand-cream py-3.75 max-[850px]:flex-col max-[850px]:items-start">
                     <p className="text-brand-lime">Retenção</p>
                     <p className="text-brand-cream">Revisões frequentes ajudam o conteúdo a permanecer.</p>
                 </div>
-                <div className="flex items-center justify-between py-3.75 max-[850px]:flex-col">
+                <div className="flex items-center justify-between py-3.75 max-[850px]:flex-col max-[850px]:items-start">
                     <p className="text-brand-lime">Produtividade</p>
                     <p className="text-brand-cream">Informação reencontrada em segundos, não em horas.</p>
                 </div>

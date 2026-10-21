@@ -4,12 +4,12 @@ export default function Solution() {
     return (
         <section className="flex w-full items-center bg-brand-blue px-20 py-12.5 max-[1250px]:px-7.5 max-[850px]:px-7.5 max-[850px]:py-7.5 max-[500px]:px-5">
             <div className="flex flex-col">
-                <div className="flex items-center justify-between">
-                    <h2 className="text-[50px] text-brand-cream">Capture Agora.
+                <div className="flex items-center justify-between max-[850px]:flex-col max-[850px]:items-start max-[850px]:gap-3.75">
+                    <h2 className="text-[clamp(36px,3vw+20px,50px)] text-brand-cream">Capture Agora.
                         <br />
                         <span className="font-playfair text-brand-lime">Entenda Depois.</span>
                     </h2>
-                    <p className="w-1/2 text-end text-brand-cream">Uma jornada simples que transforma registros soltos em uma memória visual organizada — sem mudar o
+                    <p className="w-1/2 text-end text-brand-cream max-[850px]:w-full max-[850px]:text-start">Uma jornada simples que transforma registros soltos em uma memória visual organizada — sem mudar o
                         jeito
                         natural de estudar.</p>
                 </div>
@@ -116,8 +116,8 @@ export default function Solution() {
                     </div>
                 </div>
                 <div className="grid w-full grid-cols-2 rounded-[20px] max-[1199px]:grid-cols-1">
-                    <div className="relative flex items-center justify-center bg-brand-ciano p-7.5">
-                        <div className="absolute bottom-5 right-5 z-9 flex items-center justify-around gap-2.5 rounded-[15px] bg-[rgba(255,255,255,0.918)] p-3.75 shadow-[2px_2px_2px_rgba(0,0,0,.35)] max-[650px]:origin-right max-[650px]:scale-[.85] max-[650px]:p-2.5 max-[500px]:scale-[.7]">
+                    <div className="relative flex items-center justify-center bg-brand-ciano p-7.5 max-[1199px]:min-h-80">
+                        <div className="absolute bottom-5 right-5 z-9 flex items-center justify-around gap-2.5 rounded-[15px] bg-[rgba(255,255,255,0.918)] p-3.75 shadow-[2px_2px_2px_rgba(0,0,0,.35)] max-[650px]:origin-right max-[650px]:scale-[.85] max-[650px]:p-2.5 max-[500px]:right-1.25 max-[500px]:bottom-1.25 max-[500px]:origin-bottom-right max-[500px]:scale-[.7]">
                             <div className="flex h-7.5 w-7.5 items-center justify-center rounded-full bg-brand-lime">
                                 <svg xmlns="http://w3.org" viewBox="0 0 24 24" width="24" height="24" fill="none"
                                     stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-brand-blue">
@@ -129,7 +129,7 @@ export default function Solution() {
                                 <p className="text-[10px]">Reprodução Celular</p>
                             </div>
                         </div>
-                        <div className="relative grid h-full w-3/4 -rotate-4 grid-rows-2 bg-brand-cream p-2.5">
+                        <div className="relative grid h-full w-3/4 -rotate-4 grid-rows-2 bg-brand-cream p-2.5 max-[1199px]:min-h-55">
                             <span className="absolute top-1.25 left-1.25 z-2 h-6.25 w-6.25 border-t-[5px] border-l-[5px] border-brand-blue"></span>
                             <span className="absolute top-1.25 right-1.25 z-2 h-6.25 w-6.25 border-t-[5px] border-r-[5px] border-brand-blue"></span>
                             <span className="absolute bottom-1.25 right-1.25 z-2 h-6.25 w-6.25 border-r-[5px] border-b-[5px] border-brand-blue"></span>
