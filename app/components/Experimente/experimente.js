@@ -3,7 +3,7 @@ import SectionTag from "../SectionTag/sectionTag";
 
 export default function Experimente() {
     return (
-        <section className="mt-15 flex min-h-[calc(100dvh-60px)] w-full flex-col items-start gap-12.5 bg-brand-cream px-20 py-12.5 max-[1250px]:px-7.5 max-[850px]:px-7.5 max-[850px]:py-7.5 max-[500px]:px-5">
+        <section id="experimente" className="border-t border-gray-300 flex min-h-[calc(100dvh-60px)] w-full flex-col items-start gap-12.5 bg-brand-cream px-20 py-12.5 max-[1250px]:px-7.5 max-[850px]:px-7.5 max-[850px]:py-7.5 max-[500px]:px-5">
             <div className="max-w-180">
                 <SectionTag name="Protótipo e código-fonte" />
                 <h1 className="text-start text-[clamp(42px,4vw+20px,80px)] font-medium leading-[1.2] max-[650px]:leading-[1.1]">Do conceito<br /><span className="font-playfair text-brand-blue">ao seu celular.</span></h1>

@@ -15,7 +15,7 @@ export default function Footer() {
             <nav className="grid gap-2.5" aria-label="Navegação principal">
                 <Link href="/#top" className="font-mansrope text-[12px] text-brand-primary transition-colors duration-300 hover:text-brand-blue">A solução</Link>
                 <Link href="/#galeria" className="font-mansrope text-[12px] text-brand-primary transition-colors duration-300 hover:text-brand-blue">Galeria</Link>
-                <Link href="/experimente" className="font-mansrope text-[12px] text-brand-primary transition-colors duration-300 hover:text-brand-blue">Experimente</Link>
+                <Link href="/#experimente" className="font-mansrope text-[12px] text-brand-primary transition-colors duration-300 hover:text-brand-blue">Experimente</Link>
             </nav>
 
             <nav className="grid gap-2.5" aria-label="Navegação complementar">

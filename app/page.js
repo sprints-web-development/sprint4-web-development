@@ -8,6 +8,7 @@ import Publico from "./components/Publics/publics";
 import Solution from "./components/UI-Components/Solution/solution";
 import Time from "./components/Time/Time";
 import Top from "./components/Top/top";
+import Experimente from "./components/Experimente/experimente";
 
 export default function LandingPage() {
 
@@ -29,6 +30,7 @@ export default function LandingPage() {
       <Galeria />
       <Caracteristicas />
       <Time time={team} />
+      <Experimente/>
       <Contato />
       <Footer />
     </>

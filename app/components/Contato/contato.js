@@ -45,6 +45,7 @@ export default function Contato() {
         setStatus(false)
         setError(false)
 
+        console.log("Dados do env: ", process.env)
         try {
             const response = await fetch("https://api.web3forms.com/submit", {
                 method: "POST",

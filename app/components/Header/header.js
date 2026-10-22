@@ -24,7 +24,7 @@ export default function Header() {
       <Link href="/#top">
         <div className="flex items-center gap-1.25">
           <Image src="/images/logo.png" alt="Logotipo do SnapNote" width={50} height={50} className="max-h-15" />
-          <p className="text-xl font-extrabold text-brand-primary">Snap<span className="text-brand-yellow">Note</span></p>
+          <p className="text-xl font-extrabold text-brand-primary">Snap<span className="text-brand-blue">Note</span></p>
         </div>
       </Link>
       <nav>
@@ -33,7 +33,7 @@ export default function Header() {
           <li><Link href="/#publico" className="cursor-pointer text-sm font-bold">Público-alvo</Link></li>
           <li><Link href="/#galeria" className="cursor-pointer text-sm font-bold">Galeria</Link></li>
           <li><Link href="/#equipe" className="cursor-pointer text-sm font-bold">Nossa Equipe</Link></li>
-          <li><Link href="/experimente" aria-current={isExperimente ? "page" : undefined} className={`cursor-pointer text-sm font-bold ${isExperimente ? 'text-brand-yellow underline decoration-2 underline-offset-4' : ''}`}>Experimente</Link></li>
+          <li><Link href="/#experimente" aria-current={isExperimente ? "page" : undefined} className={`cursor-pointer text-sm font-bold ${isExperimente ? 'text-brand-yellow underline decoration-2 underline-offset-4' : ''}`}>Experimente</Link></li>
           <li><Link href="/#contact" className="cursor-pointer rounded-[30px] border-2 border-brand-yellow bg-brand-yellow px-3.75 py-3.75 text-sm font-bold text-brand-snow transition-[.3s] ease-in-out hover:bg-brand-cream hover:text-brand-yellow">Contato</Link></li>
         </ul>
       </nav>

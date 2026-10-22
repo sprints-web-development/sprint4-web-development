@@ -11,7 +11,7 @@ export default function Problem() {
                 </div>
                 <div className="flex flex-col items-center justify-center gap-5">
                     <p className="text-brand-cream">Fotografamos conteúdos importantes todos os dias. Depois, eles desaparecem entre prints, memes e
-                        milhares de imagens sem nome.
+                        milhares de imagens perdidas na galeria.
                     </p>
                     <div className="grid grid-cols-3 max-[650px]:grid-cols-1 max-[650px]:gap-5">
                         <div className="flex flex-col items-start justify-start">
